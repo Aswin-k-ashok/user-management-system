@@ -1,5 +1,7 @@
 var express = require('express');
+const {render} = require('../app');
 var router = express.Router();
+var userHelpers = require('../helpers/user-helpers')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -12,8 +14,6 @@ router.get('/home',function(req,res,next){
 
 
 
-router.get('/sign',function(req,res,next){
-  res.render('user/usrSign')
-})
+
 
 module.exports = router;
